@@ -7,7 +7,7 @@ public class stringCalculator {
 
         String[] numbers = input.split(",|\n");
         int sum = 0;
-        int i = 0;
+
 
         if (input.isEmpty()) {
             return 0;
@@ -16,7 +16,7 @@ public class stringCalculator {
             return Integer.parseInt(input);
         }
         else {
-            for (i = 0; i < numbers.length; i++) {
+            for (int i = 0; i < numbers.length; i++) {
                 sum += Integer.parseInt(numbers[i]);
 
             }
@@ -26,7 +26,6 @@ public class stringCalculator {
 
 
     }}
-
 
 
 
