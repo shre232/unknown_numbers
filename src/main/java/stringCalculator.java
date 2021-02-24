@@ -1,33 +1,33 @@
 
+
 public class stringCalculator {
-        public static int Add(String input){
-            String[] numbers=input.split(",");
-            if(isEmpty(input)){
-                return 0;
-            }
-            if (input.length()==1){
-                return stringToInt(input);
-            }
-            else{
-                return getsum(numbers[0],numbers[1]) ;
-            }
+
+
+    public static int Add(String input) {
+
+        String[] numbers = input.split(",|\n");
+        int sum = 0;
+        int i = 0;
+
+        if (input.isEmpty()) {
+            return 0;
         }
-
-        private static boolean isEmpty(String input){
-            return input.isEmpty();
-
-    }
-
-
-        private static int getsum(String num1,String num2){
-            return Integer.parseInt(num1)+Integer.parseInt (num2);
-        }
-        private static int stringToInt(String input) {
-
+        if (input.length() == 1) {
             return Integer.parseInt(input);
         }
+        else {
+            for (i = 0; i < numbers.length; i++) {
+                sum += Integer.parseInt(numbers[i]);
+
+            }
+            return sum;
+
+        }
 
 
-    }
+    }}
+
+
+
 
 
